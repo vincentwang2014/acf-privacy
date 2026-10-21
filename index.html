@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'">
+<title>ACF Privacy Policy</title>
+<style>
+:root { --bg: #ffffff; --fg: #1a1a1a; --muted: #555; }
+@media (prefers-color-scheme: dark) { :root { --bg: #161616; --fg: #e8e8e8; --muted: #aaa; } }
+body { background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, sans-serif; max-width: 46rem; margin: 2rem auto; padding: 0 16px; }
+h1 { font-size: 1.5rem; line-height: 1.3; }
+li { margin: .3rem 0; }
+</style>
+</head>
+<body>
+<h1>ACF — Agent Context Firewall: browser extension privacy policy</h1>
+<p>Effective date: 2026-10-21. Contact: agent.context.firewall@gmail.com.</p>
+<p><strong>What the extension does.</strong> Before a message, paste, edit or text file is sent to claude.ai, chatgpt.com (including chat.openai.com), chat.deepseek.com or gemini.google.com, the extension checks it on your computer for credentials such as API keys and private keys, and for numbers such as card numbers. It does this only after you click "Agree" on its consent page.</p>
+<p><strong>Where the check runs.</strong> Every check runs on your computer, inside the extension. The checking engine ships inside the extension; the extension loads no code from the network.</p>
+<p><strong>What it sends.</strong> The extension sends no copy of your content to us or to any third party. It has no telemetry and no analytics. What you choose to send still goes to the AI site, by that site's own request; the extension only checks it before it goes.</p>
+<p><strong>What it keeps in the browser's storage</strong> (stays after the browser closes):</p>
+<ul>
+<li>The last 10 entries: checks that found something (stopped, asked, or allowed by you), and events such as "not checked" or "too long". Each entry holds the time, the kind of event, the result, a reason code, the site's domain, whether an earlier answer was reused, the categories found, and for attachments only their type and size. It holds no original text, no matched fragment and no file name. Clean sends are not recorded. The list is stored encrypted, with a key the browser keeps for this extension and doesn't let it export. This doesn't protect against code running inside the extension or against a browser that has been taken over.</li>
+<li>Whether you clicked "Agree" (the consent page's version, time and language).</li>
+<li>Your chosen style, whether the regional rules are on, and the rule pack version record.</li>
+<li>The extension's own running state (whether its checker started, error messages, whether the last check failed). No content.</li>
+</ul>
+<p><strong>What it keeps only while the browser runs</strong> (cleared when the browser closes):</p>
+<ul>
+<li>For each asking card, a binding record for up to 10 minutes, so that what you allow is that exact send. It holds no original text, but it holds a hash computed from several things, including a hash of the text itself.</li>
+<li>Each tab's "was this checked", site-structure self-check and "needs a refresh" state. No content.</li>
+</ul>
+<p><strong>What it keeps briefly in the page's memory only</strong> (never written to storage, never sent), so you can get your text back after a refusal:</p>
+<ul>
+<li>The refused or asked-about text you typed (up to 100,000 characters): dropped after one use, when the notice or card goes, or after 10 minutes.</li>
+<li>The content of a refused text attachment (at most 3, 4M characters in total), so you can see which line is the problem in the extension's own viewer. After 15 minutes it can't be opened; it is dropped when the notice goes, when you leave the page, or at the next use after 15 minutes.</li>
+<li>For a refused attachment, which file, line and category (including the file name, no content).</li>
+<li>When you choose "Send it anyway" for content that is too long, a SHA-256 fingerprint of that content, for 10 minutes.</li>
+<li>In the Strict style, your answer to "Upload these images, PDFs or other files?", with a key computed from those files and the site address, for 3 minutes (at most 50).</li>
+<li>The send being checked or asked about, until the check is done or you answer the card.</li>
+</ul>
+<p>Closing the tab or leaving the page drops all of these.</p>
+<p><strong>How to delete it.</strong> The popup has a "Clear history" button. It asks first; when you choose Delete, the recent list is deleted from the browser and your settings stay. Uninstalling the extension removes everything it stored.</p>
+<p><strong>Permissions.</strong> "storage" holds the settings and records above. "scripting" is used only to start the checks inside the four sites' pages after you agree. Site access is limited to claude.ai, chatgpt.com, chat.openai.com, chat.deepseek.com and gemini.google.com. The extension does not read your browsing history and does not touch other sites.</p>
+<p><strong>Sharing and sale.</strong> We don't sell, transfer or share your data, and we don't use it for advertising, for credit decisions, or for any purpose other than the check described above. The use of information received from Google APIs will adhere to the Chrome Web Store User Data Policy, including the Limited Use requirements.</p>
+<p><strong>Changes.</strong> If this policy changes, the new version is published at the same address with a new effective date.</p>
+</body>
+</html>
